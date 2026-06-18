@@ -1,6 +1,6 @@
 # Jared's AI Tutorials
 
-Walkthroughs and done-for-you AI builds I've made and shared. Free to use and share, just not to resell (see LICENSE).
+Walkthroughs and done-for-you AI builds I've made and shared. Free to use, share, and build on, just not to resell (see LICENSE).
 
 ## Tutorials
 
@@ -10,4 +10,4 @@ Walkthroughs and done-for-you AI builds I've made and shared. Free to use and sh
 
 Copyright (c) 2026 Jared Rhodenizer.
 
-The tutorials in this repository are licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0). You are free to share them, with attribution, for noncommercial purposes, without modifications. Full terms are in the LICENSE file and at https://creativecommons.org/licenses/by-nc-nd/4.0/
+The tutorials in this repository are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). You are free to share and adapt them, with attribution, for noncommercial purposes, as long as you license your contributions under these same terms. Full terms are in the LICENSE file and at https://creativecommons.org/licenses/by-nc-sa/4.0/
