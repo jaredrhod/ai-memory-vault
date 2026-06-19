@@ -55,7 +55,7 @@ Goal: Obsidian installed, synced, and readable/writable by Claude. Pick one conn
 
 ## Step 2 — Connect Claude to the vault
 
-**Option A — Claude Code (recommended, most capable).** Open Claude Code with its working directory set to the vault folder (`cd "/path/to/vault" && claude`). It reads and writes vault files directly over the filesystem — no MCP server, no tunnel, nothing to maintain. It also auto-loads `CLAUDE.md` at the vault root every session, which is what makes the two-layer boot (below) possible. The rest of this guide assumes this path.
+**Option A — Claude Code (recommended, most capable).** Keep your vault as pure notes and run Claude Code from a *separate* working folder. Make a small folder for your AI (anything — say `~/ai-brain`), put your `CLAUDE.md` boot config in it, and launch `claude` from there. Claude Code auto-loads that `CLAUDE.md` every session; the boot config carries your vault's path and points the AI at it. From there it reads and writes your vault files directly over the filesystem — no MCP server, no tunnel, nothing to maintain — and the first time it touches the vault folder it will ask for one-time file access; approve it. Keeping `CLAUDE.md` (which is Claude-Code config, not a note) *out* of the vault is what lets the vault stay a clean, tool-agnostic memory you can point any number of projects or AIs at without confusion. This is the two-layer boot (below): CLAUDE.md in your working folder, VAULT-INDEX.md in the vault. The rest of this guide assumes this path.
 
 **Option B — Claude Desktop, local MCP (filesystem server).** Edit `~/Library/Application Support/Claude/claude_desktop_config.json` and add (or merge in) an `obsidian` server:
 
@@ -430,12 +430,12 @@ The single queue of open work across everything. Tag each item with its project 
 
 ### 4.5 CLAUDE.md (Claude Code users)
 
-If running inside Claude Code, create `CLAUDE.md` at the vault root. This is the **boot config** — the short, durable layer that survives context compaction. Keep it tight: the startup sequence and only the rules that must never lapse. The fuller manual lives in VAULT-INDEX.md.
+If running inside Claude Code, create `CLAUDE.md` in your **working folder** — the folder you launch `claude` from, NOT the vault (see Part 1). This is the **boot config** — the short, durable layer that survives context compaction. Keep it tight: the startup sequence, your vault's path, and only the rules that must never lapse. The fuller manual lives in VAULT-INDEX.md at the vault root.
 
 ```markdown
 # Boot Config
 
-This is the pinned boot file. It survives compaction; VAULT-INDEX.md may not, so anything that can't lapse lives here.
+This is the pinned boot file, kept in your working folder (not the vault). It survives compaction; VAULT-INDEX.md may not, so anything that can't lapse lives here. Your vault is at `/path/to/your/vault/`; the startup sequence reads it there.
 
 ## Startup Sequence
 At the start of every session:

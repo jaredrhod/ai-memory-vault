@@ -1,14 +1,6 @@
 <!-- Starter template for the Second Brain Builder tutorial.
 
-This is Claude Code's OWN auto-loaded memory file. It does NOT go in your vault — it lives in Claude Code's per-project folder, at a path that mirrors wherever you run Claude Code from, with the slashes turned into dashes. So if your vault is at:
-
-    /Users/you/Documents/Brain
-
-then this file lives at:
-
-    ~/.claude/projects/-Users-you-Documents-Brain/memory/MEMORY.md
-
-Easiest way to find yours: run  ls ~/.claude/projects/  and open the folder whose name matches your vault path, or just ask Claude Code "where is your MEMORY.md file?"
+This is Claude Code's OWN auto-loaded memory file. It does NOT go in your vault — it lives in Claude Code's per-project folder, under ~/.claude/projects/. The subfolder is named after the folder you run Claude Code from (your working directory), with the slashes turned into dashes — so the simplest move is to just find it: run  ls ~/.claude/projects/  and open the folder that matches your working directory, or ask Claude Code "where is your MEMORY.md file?"
 
 Replacing this file's contents with the pointer below makes Claude Code's native memory redirect into your vault, so you never end up with two memory layers that drift apart. Migrate anything already in it into your vault FIRST (see the tutorial), then paste this. -->
 

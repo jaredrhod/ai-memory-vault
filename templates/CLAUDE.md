@@ -4,16 +4,16 @@ This is the pinned boot file. If you use Claude Code, it loads this automaticall
 
 (Starter template. Replace the [bracketed] parts, set your vault path below, and add or cut rules to fit how you work. These are the rules that have proven worth keeping — treat them as a strong default, not gospel.)
 
-## Vault location
+## Where this file goes, and where your vault is
 
-My vault lives at:
+Keep this file OUT of your vault. It lives in the folder you run Claude Code from (your "working directory"), separate from your notes — so the vault stays pure memory that any AI can open, and you don't tangle it up the moment you have more than one project. Your vault (the notes) lives at:
 
 ```
 /Users/you/Documents/Brain        (Mac — replace "you" and the folder name with yours)
 C:\Users\you\Documents\Brain      (Windows)
 ```
 
-If you run Claude Code from inside the vault folder, it already knows where it is. If you use Claude Desktop, claude.ai, or any other AI, you have to point it here — set this path in your MCP / filesystem connector and tell the AI "my vault is at this path." An AI can't read or maintain a vault it can't find.
+Claude Code auto-loads this CLAUDE.md from your working directory, and the startup sequence below sends it to read the vault at that path. If you use Claude Desktop, claude.ai, or another AI, point that at the vault path too (set it in your MCP / filesystem connector and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
 
 ## Startup Sequence
 
