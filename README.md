@@ -8,7 +8,7 @@ Walkthroughs and done-for-you AI builds I've made and shared. Free to use, share
 
 ## Templates
 
-Starter files for the Second Brain Builder system, ready to drop in and fill out. NEach one carries a sample vault path so the AI knows where your vault lives.
+Starter files for the Second Brain Builder system, ready to drop in and fill out. Each one carries a sample vault path so the AI knows where your vault lives.
 
 - **[CLAUDE.md](templates/CLAUDE.md):** the boot config. Goes in the folder you run Claude Code from (your **working directory**), kept **out of your vault** so the vault stays pure notes and doesn't get tangled once you have more than one project. Claude Code auto-loads it every session and points the AI to your vault. Holds your startup sequence and the rules that can't lapse.
 - **[VAULT-INDEX.md](templates/VAULT-INDEX.md):** the operating manual. This one lives **inside your vault** (it's a note, not config). Your profile, your projects, the full vault rules, and how you like to work with the AI.
