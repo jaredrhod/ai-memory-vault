@@ -1,4 +1,4 @@
-<!-- Starter template for the Second Brain Builder tutorial.
+<!-- Starter template for the AI Memory Vault tutorial.
 
 This is Claude Code's OWN auto-loaded memory file. It does NOT go in your vault — it lives in Claude Code's per-project folder, under ~/.claude/projects/. The subfolder is named after the folder you run Claude Code from (your working directory), with the slashes turned into dashes — so the simplest move is to just find it: run  ls ~/.claude/projects/  and open the folder that matches your working directory, or ask Claude Code "where is your MEMORY.md file?"
 

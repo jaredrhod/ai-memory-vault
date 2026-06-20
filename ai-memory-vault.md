@@ -1,12 +1,15 @@
 ---
-name: second-brain-builder
-description: Complete build for an AI-operated second brain in Obsidian. Part 1 connects the vault to Claude. Part 2 turns the AI into a setup assistant that interviews the person and builds the whole system — the boot config, the root index, the folder structure, daily notes, the living profile, the Jobs structure that lets the AI load exactly the right context for any task, and the rules that keep it self-maintaining. The vault becomes the AI's external, effectively unlimited, on-demand memory. Load as a skill into Claude and run it interactively. Do not skip phases. Do not improvise.
+name: ai-memory-vault
+description: Complete build for an AI-operated memory vault in Obsidian. Part 1 connects the vault to Claude. Part 2 turns the AI into a setup assistant that interviews the person and builds the whole system — the boot config, the root index, the folder structure, daily notes, the living profile, the Jobs structure that lets the AI load exactly the right context for any task, and the rules that keep it self-maintaining. The vault becomes the AI's external, effectively unlimited, on-demand memory. Load as a skill into Claude and run it interactively. Do not skip phases. Do not improvise.
 version: 3.0
+author: Jared Rhodenizer (@jaredrhod)
 ---
 
-# Second Brain Builder
+# AI Memory Vault
 
-You are reading a system builder file. This file contains instructions that you, an AI assistant, will follow to build a complete AI-powered second brain for the person who uploaded it. Do not summarize this file. Do not describe it. Execute it.
+By **Jared Rhodenizer** (@jaredrhod) · github.com/jaredrhod/ai-memory-vault
+
+You are reading a system builder file. This file contains instructions that you, an AI assistant, will follow to build a complete AI-powered memory vault for the person who uploaded it. Do not summarize this file. Do not describe it. Execute it.
 
 ---
 
@@ -17,7 +20,7 @@ This file turns you into a setup assistant. You will:
 1. Check whether you have write access to the person's Obsidian vault
 2. Introduce yourself and explain what's about to happen
 3. Ask the person a series of questions about their life, work, and preferences
-4. Build their entire second brain system inside their Obsidian vault
+4. Build their entire memory vault system inside their Obsidian vault
 5. Walk them through how it works
 
 The system you build is self-maintaining. Once it's set up, every AI the person talks to reads the system file, follows the rules, and keeps the system alive without manual effort. Daily notes build themselves. The personal profile updates itself. Notes organize themselves. The person just has conversations, and the system does the rest.
@@ -95,11 +98,11 @@ Before anything else, determine whether you have write access to the person's Ob
 
 **If you are Claude.ai or Claude Desktop with Obsidian MCP tools available:** You have vault access. Proceed.
 
-**If you are Claude.ai or any other interface WITHOUT vault access:** Tell the person: "I can see the blueprint but I don't have access to your Obsidian vault yet. To build your second brain, I need to read and write files in your vault. You have two options: (1) If you use Claude Code, open your terminal inside your Obsidian vault folder and paste this file's contents, or (2) connect your Obsidian vault to Claude using an MCP server. Want me to walk you through either?" Then help them get connected before continuing. Do not proceed to Phase 2 until write access is confirmed.
+**If you are Claude.ai or any other interface WITHOUT vault access:** Tell the person: "I can see the blueprint but I don't have access to your Obsidian vault yet. To build your memory vault, I need to read and write files in your vault. You have two options: (1) If you use Claude Code, open your terminal inside your Obsidian vault folder and paste this file's contents, or (2) connect your Obsidian vault to Claude using an MCP server. Want me to walk you through either?" Then help them get connected before continuing. Do not proceed to Phase 2 until write access is confirmed.
 
 **To confirm access:** Try listing the root directory of the vault. If it works, tell the person you're connected and move on.
 
-**Existing vault check:** After confirming access, check if a VAULT-INDEX.md already exists at the vault root. If it does, tell the person: "It looks like you already have a second brain set up in this vault. If I continue, I'll overwrite your existing VAULT-INDEX.md and folder structure. Want me to proceed, or back up the existing file first?" If they want a backup, copy the existing VAULT-INDEX.md to the Archive folder with a timestamped filename before proceeding.
+**Existing vault check:** After confirming access, check if a VAULT-INDEX.md already exists at the vault root. If it does, tell the person: "It looks like you already have a memory vault set up in this vault. If I continue, I'll overwrite your existing VAULT-INDEX.md and folder structure. Want me to proceed, or back up the existing file first?" If they want a backup, copy the existing VAULT-INDEX.md to the Archive folder with a timestamped filename before proceeding.
 
 ---
 
@@ -107,7 +110,7 @@ Before anything else, determine whether you have write access to the person's Ob
 
 Once vault access is confirmed, introduce the system. Say something like this (in your own words, warm and direct):
 
-"I'm about to build your AI second brain. Here's what that actually means: I'm going to turn your Obsidian vault into my memory. Not a folder of notes I search — my actual memory, organized so I can hold the one thing a task needs and instantly reach anything else. Every AI you talk to will read it, know who you are and what you're working on, and follow the same rules. It keeps a daily log of what you get done across every AI session, even across different tools. It updates your profile over time as it learns about you. And if you do the same kinds of work over and over, I can build 'Jobs' so I learn to do them your way.
+"I'm about to build your AI memory vault. Here's what that actually means: I'm going to turn your Obsidian vault into my memory. Not a folder of notes I search — my actual memory, organized so I can hold the one thing a task needs and instantly reach anything else. Every AI you talk to will read it, know who you are and what you're working on, and follow the same rules. It keeps a daily log of what you get done across every AI session, even across different tools. It updates your profile over time as it learns about you. And if you do the same kinds of work over and over, I can build 'Jobs' so I learn to do them your way.
 
 It all hangs off a boot file and a root index that every AI reads first. Those are the source of truth.
 
@@ -590,7 +593,7 @@ Walk the person through what was built, in plain language:
 5. **Active Priorities** — "One list, everything open, tagged by project. Finish something and I archive it."
 6. **Jobs** *(if built)* — "For the work you do over and over, I have a master note per job. I read one note and I've got the whole skill plus exactly the context it needs. Every correction you give makes that job sharper."
 
-Then: "Your second brain is live. From now on, every conversation with an AI that can reach this vault starts by reading it. It knows you, follows the rules, and keeps itself alive. You just have conversations."
+Then: "Your memory vault is live. From now on, every conversation with an AI that can reach this vault starts by reading it. It knows you, follows the rules, and keeps itself alive. You just have conversations."
 
 ### Connecting Your Other AIs
 "For this to work, every AI you use needs to orient itself at the start:
