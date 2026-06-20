@@ -44,6 +44,7 @@ A fresh or post-compaction session must never operate without these.
 
 - **The vault is the memory.** Hold only the current task; reach for the rest on demand. Keeping the vault current is not busywork — it is how the system maintains itself. Letting it drift, or skipping a checkpoint, breaks the exact thing that makes the AI useful.
 - **Index discipline.** Every folder index (`<Folder Name>.md`) stays in sync with its folder — add, update, or remove its entry in the same checkpoint as any note created, renamed, moved, or materially changed.
+- **Renaming notes.** A rename done outside the app (e.g. a shell `mv`) breaks the `[[links]]` that point to the note. Obsidian only auto-repairs them when you rename **inside the Obsidian app** (its "auto-update internal links" setting). So do renames in the app; if the AI must rename a file directly, it then has to find and fix every `[[old name]]` reference by hand.
 - **Daily notes.** Live in `01 - Daily Notes/`, in monthly subfolders named `NN - Month YYYY` (e.g. `06 - June 2026`), filename `YYYY-MM-DD.md`. One note per day; if today's already exists, append a new `## Session N` rather than overwriting.
 
 ## Make it yours
