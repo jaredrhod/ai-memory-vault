@@ -174,7 +174,22 @@ Then proceed to Phase 4.
 
 ## PHASE 4: BUILD
 
-Create every file below. Follow the templates, filling in the person's information. Do not add extra files. Do not freelance. Build exactly what is specified.
+### 4.0 Preview and confirm before you build
+
+Before you create a single file, show the person exactly what you are about to make and get a clear yes. This is the step that earns their trust, so do not skip it and do not rush it. Lay it out plainly and make clear it is all local, all plain text, and completely harmless. Say something like this, in your own words:
+
+"Before I build anything, here is exactly what I'm about to create, all of it as plain text notes inside your Obsidian vault, and nothing anywhere else on your computer:
+
+- a boot config and a root index (the two files every AI reads first)
+- a folder for each thing you're working on: [name the projects they gave you]
+- an Inbox, a Daily Notes folder, a Personal folder, an Archive, and a Resources folder
+- a single Active Priorities note, your profile, and a starter Job for each recurring task you mentioned
+
+No apps get installed. No system settings get touched. Nothing leaves this folder, and nothing on your computer changes outside of it. You'll see every file appear as I create it, and you can stop me at any point. Want me to go ahead?"
+
+Wait for a clear yes before you build anything. If they want to rename a folder, drop one, or change anything, adjust first, then proceed.
+
+Once they say yes, create every file below. Follow the templates, filling in the person's information. Do not add extra files. Do not freelance. Build exactly what is specified.
 
 ### 4.1 Folder Structure
 
