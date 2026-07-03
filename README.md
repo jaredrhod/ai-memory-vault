@@ -6,6 +6,12 @@ Give your AI a real, persistent memory. This is the open-source system that turn
 
 - **[ai-memory-vault.md](ai-memory-vault.md):** the build script. Run it inside Claude and it interviews you, then builds a complete, self-maintaining system: a boot config, a folder structure around your real projects, daily notes that write themselves, a profile that updates as the AI learns about you, and "Jobs" that teach it to do your recurring tasks your way. Your vault becomes the AI's memory, so it lives outside the model with no size ceiling, and the AI holds only what the current task needs while reaching anything else in one step. Watch the walkthrough: https://www.youtube.com/watch?v=z9YzRqjJo4k
 
+## AI Priming
+
+The daily habit this whole system exists to power. AI Priming is having your AI read a specific set of your notes before it gives you the answer or output you want. Before my agent writes a marketing email, it reads my copywriting notes, my email marketing notes, and my customer avatar. Then it writes. Different job, different stack of notes. The vault is the library. Priming is the trip to it, and the Jobs system the build script sets up is what makes that trip automatic.
+
+Full definition and examples: https://jaredrhod.com/ai-priming
+
 ## Templates
 
 Starter files for the system, ready to drop in and fill out. Each one carries a sample vault path so the AI knows where your vault lives.
