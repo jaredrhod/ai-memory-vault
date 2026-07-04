@@ -4,7 +4,7 @@ Give your AI a real, persistent memory. This is the open-source system that turn
 
 ## The build
 
-- **[ai-memory-vault.md](ai-memory-vault.md):** the build script. Run it inside Claude and it interviews you, then builds a complete, self-maintaining system: a boot config, a folder structure around your real projects, daily notes that write themselves, a profile that updates as the AI learns about you, and "Jobs" that teach it to do your recurring tasks your way. Your vault becomes the AI's memory, so it lives outside the model with no size ceiling, and the AI holds only what the current task needs while reaching anything else in one step. Watch the walkthrough: https://www.youtube.com/watch?v=z9YzRqjJo4k
+- **[ai-memory-vault.md](ai-memory-vault.md):** the build script. Run it inside Claude and it interviews you, then builds a complete, self-maintaining system: a boot config, a folder structure around your real projects, daily notes that write themselves, a profile that updates as the AI learns about you, and "Jobs" that teach it to do your recurring tasks your way. Your vault becomes the AI's memory, so it lives outside the model with no size ceiling, and the AI holds only what the current task needs while reaching anything else in one step. Watch the walkthrough: https://www.youtube.com/watch?v=0VEisejtRJY
 
 ## AI Priming
 
