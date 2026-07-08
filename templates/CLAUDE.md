@@ -2,15 +2,16 @@
 
 This is the pinned boot file. If you use Claude Code, it loads this automatically at the start of every session. It survives context compaction; VAULT-INDEX.md may not, so the rules that can't lapse live here. The full operating manual is VAULT-INDEX.md at your vault root — read it at startup.
 
-(Starter template. Replace the [bracketed] parts, set your vault path below, and add or cut rules to fit how you work. These are the rules that have proven worth keeping — treat them as a strong default, not gospel.)
+(Starter template. Only two spots need your input, both marked **[FILL IN: ...]**: your vault path just below, and your own rules in "Make it yours" at the bottom. Everything else is ready to use as-is — these rules have proven worth keeping; treat them as a strong default, not gospel, and cut or add to fit how you work.)
+
+(**AI:** if any [FILL IN: ...] markers remain when you read this file, setup isn't finished — offer to fill them in with the person, then delete this block.)
 
 ## Where this file goes, and where your vault is
 
 Keep this file OUT of your vault. It lives in the folder you run Claude Code from (your "working directory"), separate from your notes — so the vault stays pure memory that any AI can open, and you don't tangle it up the moment you have more than one project. Your vault (the notes) lives at:
 
 ```
-/Users/you/Documents/Brain        (Mac — replace "you" and the folder name with yours)
-C:\Users\you\Documents\Brain      (Windows)
+[FILL IN: your vault's full path — e.g. /Users/you/Documents/Brain on Mac, C:\Users\you\Documents\Brain on Windows]
 ```
 
 Claude Code auto-loads this CLAUDE.md from your working directory, and the startup sequence below sends it to read the vault at that path. If you use Claude Desktop, claude.ai, or another AI, point that at the vault path too (set it in your MCP / filesystem connector and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
@@ -55,3 +56,5 @@ The rules above are the engine. This section is where the system stops being gen
 - "Never suggest I stop working or take a break. I'll say when I'm done."
 - Writing rules for anything it drafts for you — a specific voice, or words and punctuation to avoid.
 - Any non-negotiable you've learned you need.
+
+[FILL IN: your own rules — start with even one, and grow this list as you learn what you need.]

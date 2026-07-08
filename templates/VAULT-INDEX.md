@@ -7,67 +7,71 @@ type: index
 
 Read this file at the start of every conversation to understand who I am, how I work, and how this vault is organized.
 
-(This is a starter template. Replace every [bracketed] part with your own information, delete any section that doesn't apply to you, and write it in the first person as if you wrote it. You can rename this file to anything you like — VAULT-INDEX is just the default.)
+(This is a starter template. Every spot that needs your information is marked **[FILL IN: ...]**. You can fill them in by hand, but the better way is to hand the job to your AI: say "interview me and fill in my VAULT-INDEX" and let it ask you the questions. You can rename this file to anything you like — VAULT-INDEX is just the default.)
+
+(**AI:** if you are reading this file and any [FILL IN: ...] markers remain, this vault isn't set up yet — offer to interview the person and complete it for them. Ask about one topic at a time, conversationally. Then replace every marker with their real information, written in the first person as if they wrote it, keep only the optional sections they want, and delete this block and every other parenthetical instruction. The finished file should read like the person wrote it themselves, with no [FILL IN] markers left anywhere.)
 
 ---
 
 ## Vault location
 
-This vault lives at `/Users/you/Documents/Brain` (Mac) or `C:\Users\you\Documents\Brain` (Windows) — replace it with your real path. If you use Claude Desktop, claude.ai, or any AI other than Claude Code, you have to point it at this path (set it in your MCP / filesystem connector, and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
+This vault lives at `[FILL IN: your vault's full path — e.g. /Users/you/Documents/Brain on Mac, C:\Users\you\Documents\Brain on Windows]`. If you use Claude Desktop, claude.ai, or any AI other than Claude Code, you have to point it at this path (set it in your MCP / filesystem connector, and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
 
 ---
 
 ## Who I Am
 
-[Your name, age if you want, where you live, who's in your household. First person, conversational, concise.]
+[FILL IN: your name, age if you want, where you live, who's in your household. First person, conversational, concise.]
 
 ## Key People
 
-[For each important person in your work and life:]
-- **[[Name]]** — [one-line description of who they are and their role to you]
+[FILL IN: one line per important person in your work and life — partners, team, family, mentors:]
+- **[[Name]]** — [FILL IN: who they are and their role to you]
 
-## [Project 1 Name] ([Folder Number] - [Project Folder Name])
+## [FILL IN: Project 1 name, with its folder in parentheses — e.g. "The Coffee Shop (02 - Coffee Shop)"]
 
-[What it is, what stage it's in, the key tools/platforms it uses. First person.]
-- **Status:** [Active / Maintenance / Planning]
+[FILL IN: what it is, what stage it's in, the key tools/platforms it uses. First person.]
+- **Status:** [FILL IN: Active / Maintenance / Planning]
 
-## [Project 2 Name]
+## [FILL IN: Project 2 name]
 
-[Same format. Repeat for each project or business.]
+[FILL IN: same format. Repeat this section for each project or business; delete it if you only have one.]
 
 ## Vault Structure
 
 ```
 00 - Inbox          ← Capture everything, sort later
 01 - Daily Notes    ← Dated logs of what got done, one file per day
-02 - [Project 1]    ← [brief description]
-03 - [Project 2]    ← [brief description]
+02 - [FILL IN: Project 1]    ← [FILL IN: brief description]
+03 - [FILL IN: Project 2]    ← [FILL IN: brief description, one line per project folder]
 ...
 [N] - Personal      ← Life outside work
 [N] - Archive       ← Completed projects and old notes
 [N] - Resources     ← Cross-project reference material, templates, Jobs
 ```
 
+[FILL IN: replace each [N] with the real numbers that follow your last project — Personal is always second-to-last, then Archive, then Resources last.]
+
 ## What's Active Right Now
 
 All open work lives in one note: [[Active Priorities]]. Tag each item with its project where it isn't obvious. Check it at the start of every conversation; verify an item's real state before acting on it (a listed item may already be done).
 
-[Include the sections below only if they apply to you. Delete the ones you skip.]
+(Optional sections — keep the ones that apply to you, delete the ones you skip. The Preferences section after them is worth keeping for everyone.)
 
 ## How I Think
-[Bullets, first person.]
+[FILL IN: bullets, first person.]
 
 ## Health
-[Bullets, first person.]
+[FILL IN: bullets, first person.]
 
 ## Personal Interests
-[Bullets, first person.]
+[FILL IN: bullets, first person.]
 
 ## Beliefs
-[Bullets, first person.]
+[FILL IN: bullets, first person.]
 
 ## Daily Routine
-[Bullets, first person.]
+[FILL IN: bullets, first person.]
 
 ## My Preferences for Working with AI
 
@@ -122,7 +126,7 @@ When creating or editing a note, add `wikilinks`:
 **status** — Default `active`. For existing notes infer from content: in progress / has unchecked items → `active`; all done → `completed`; a future "maybe" → `idea`; was active but gone quiet → `parked`; in the Archive folder → `archived`.
 
 **project** — What the note *serves* (folder is the default, but content wins). Mapping:
-- `02 - [Project]/*` → `[project-slug]`  (one line per project)
+- `02 - [FILL IN: Project]/*` → `[FILL IN: project-slug]`  [FILL IN: one line per project folder; slugs are lowercase and hyphenated — "The Coffee Shop" → coffee-shop]
 - `[Personal]/*` → `personal`
 - `01 - Daily Notes/*` → `personal`
 - `[Archive]/*` → infer from content / original project
@@ -140,7 +144,7 @@ When creating or editing a note, add `wikilinks`:
 ### Valid Field Values
 
 **status:** `active` | `completed` | `parked` | `idea` | `archived`
-**project:** [list your project slugs] | `personal` | `meta`
+**project:** [FILL IN: your project slugs] | `personal` | `meta`
 **type:** `index` | `reference` | `guide` | `plan` | `log`
 
 ### Folder Indexes (keep them in sync)
@@ -162,7 +166,9 @@ When I say something is done or ask to archive a note: (1) set its frontmatter `
 
 ### Writing Rules
 
-Any rules the AI should always follow when it writes for you. One worth stealing: **no em-dashes in marketing or published copy you draft for me** (sales pages, emails, posts) — em-dashes are a strong "an AI wrote this" tell and quietly cost you trust with sharp audiences. Hyphens in normal compound words ("30-day," "well-known") are fine. Add your own tone, formatting, and word rules here, or delete the section if you have none.
+Rules the AI always follows when it writes for me. One worth stealing for everyone: **no em-dashes in marketing or published copy you draft for me** (sales pages, emails, posts) — em-dashes are a strong "an AI wrote this" tell and quietly cost you trust with sharp audiences. Hyphens in normal compound words ("30-day," "well-known") are fine.
+
+- [FILL IN: your own tone, formatting, and word rules. Delete this line if the em-dash rule is all you need.]
 
 ### Daily Notes
 
