@@ -225,6 +225,8 @@ Also create, at the vault root, a single **`Active Priorities.md`** (see 4.2 for
 
 Create this at the vault root. The most important file in the system. Fill in every section from the discovery answers. If the person didn't answer an optional question, leave that section out entirely. Replace bracketed content with their real information, written in first person as if they wrote it.
 
+*(Maintainer note: this embedded template deliberately duplicates `templates/VAULT-INDEX.md` so this one file works standalone. The two must stay in step — an edit to one is an edit to both, in the same commit.)*
+
 ````markdown
 ---
 status: active
@@ -502,6 +504,8 @@ If running inside Claude Code, create `CLAUDE.md` in your **working folder** —
 
 Fill in the Identity section from discovery question 0 (the agent's name, role, personality, welcome line), the person's real vault path, and build "Make it yours" from their discovery answers (question 11's tone preferences, question 12's writing rules, any non-negotiables that came up). Everything else ships as written — these rules are the proven set, the same ones in the repo's templates/CLAUDE.md.
 
+*(Maintainer note: this embedded template deliberately duplicates `templates/CLAUDE.md` so this one file works standalone. The two must stay in step — an edit to one is an edit to both, in the same commit.)*
+
 ```markdown
 # Boot Config
 
@@ -540,10 +544,9 @@ At the start of every session:
 
 ## How the vault stays healthy
 - **The vault is the memory.** Hold only the current task; reach for the rest on demand. Keeping it current is not busywork — it is how the system maintains itself.
-- **Index discipline.** Every folder index stays in sync with its folder — update it in the same checkpoint as any note created, renamed, moved, or materially changed.
+- **Keep the map true.** Every folder index stays in sync with its folder — update it in the same checkpoint as any note created, renamed, moved, or materially changed. When a folder is created, create its index at the same time and update the Vault Structure map in VAULT-INDEX.md in the same pass. A note or folder the map doesn't show is one no future session will find.
 - **Renaming notes.** A rename outside the Obsidian app breaks the `[[links]]` pointing to the note (only in-app renames auto-repair them). Do renames in the app; if a file must be renamed directly, find and fix every old reference by hand.
 - **Daily notes.** Live in `01 - Daily Notes/`, filename `YYYY-MM-DD.md`. **Create every daily note from `01 - Daily Notes/Daily Note Template.md`** — never hand-roll a bare heading. One note per day; if today's exists, append a new `## Session N` rather than overwriting.
-- **New folders update the map.** When a folder is created, create its `<Folder Name>.md` index at the same time and update the Vault Structure map in VAULT-INDEX.md in the same pass.
 
 ## Habits that compound
 - **Bank the working method.** When a recurring operation fails on your first approach and you find one that works, record the winning method (and the dead end to skip) in that operation's note before moving on — so no future session pays the discovery tax twice. Recurring operations only; don't journal one-off fixes.
