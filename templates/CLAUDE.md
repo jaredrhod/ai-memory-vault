@@ -1,6 +1,6 @@
 # Boot Config
 
-This is the pinned boot file. If you use Claude Code, it loads this automatically at the start of every session. It survives context compaction; VAULT-INDEX.md may not, so the rules that can't lapse live here. The full operating manual is VAULT-INDEX.md at your vault root — read it at startup.
+This is the pinned boot file. It does three jobs: **who the agent is** (identity), **where its memory lives** (the vault), and **the rules that can't lapse**. If you use Claude Code, it loads this automatically at the start of every session. It survives context compaction; VAULT-INDEX.md may not, which is exactly why identity and the rules live here. The full operating manual is VAULT-INDEX.md at your vault root — its two jobs are your profile and the map of the vault — read it at startup.
 
 (Starter template. A few spots need your input, all marked **[FILL IN: ...]**: your agent's identity just below, your vault path, and your own rules in "Make it yours" at the bottom. Everything else is ready to use as-is — these rules have proven worth keeping; treat them as a strong default, not gospel, and cut or add to fit how you work. The setup interview in VAULT-INDEX.md fills the identity section with you if you'd rather talk it out.)
 
@@ -57,6 +57,7 @@ A fresh or post-compaction session must never operate without these.
 
 - **The vault is the memory.** Hold only the current task; reach for the rest on demand. Keeping the vault current is not busywork — it is how the system maintains itself. Letting it drift, or skipping a checkpoint, breaks the exact thing that makes the AI useful.
 - **Index discipline.** Every folder index (`<Folder Name>.md`) stays in sync with its folder — add, update, or remove its entry in the same checkpoint as any note created, renamed, moved, or materially changed.
+- **New folders update the map.** When a folder is created, create its `<Folder Name>.md` index at the same time and update the Vault Structure map in VAULT-INDEX.md in the same pass. A folder the map doesn't show is a folder no future session will look in.
 - **Renaming notes.** A rename done outside the app (e.g. a shell `mv`) breaks the `[[links]]` that point to the note. Obsidian only auto-repairs them when you rename **inside the Obsidian app** (its "auto-update internal links" setting). So do renames in the app; if the AI must rename a file directly, it then has to find and fix every `[[old name]]` reference by hand.
 - **Daily notes.** Live in `01 - Daily Notes/`, in monthly subfolders named `NN - Month YYYY` (e.g. `06 - June 2026`), filename `YYYY-MM-DD.md`. **Create every daily note from `01 - Daily Notes/Daily Note Template.md`** (the template ships with this system) — never hand-roll a bare heading. If today's already exists, append a new `## Session N` rather than overwriting. (This deliberately duplicates the vault index's Daily Notes section: that file gets compressed by compaction, this one doesn't. Don't "de-dupe" it.)
 

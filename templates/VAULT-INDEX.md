@@ -5,7 +5,7 @@ type: index
 ---
 # VAULT INDEX
 
-Read this file at the start of every conversation to understand who I am, how I work, and how this vault is organized.
+Read this file at the start of every conversation. It has two jobs: **the profile of the person you work for** (who I am, how I think, how to work with me) and **the map of this vault** (the structure, the indexes, and the rules for maintaining it). Your own identity is not here — that lives in the boot file (CLAUDE.md), which survives compaction.
 
 (This is a starter template. Every spot that needs your information is marked **[FILL IN: ...]**. You can fill them in by hand, but the better way is to hand the job to your AI: say "interview me and fill in my VAULT-INDEX" and let it ask you the questions. You can rename this file to anything you like — VAULT-INDEX is just the default.)
 
@@ -163,6 +163,8 @@ When creating or editing a note, add `wikilinks`:
 
 Every folder that holds substantial content (5+ notes, or a distinct area) gets an index note named after the folder: `<Folder Name>.md`, frontmatter `type: index`, listing each note in the folder with a one-line description. The index is a contract: when you create, rename, move, or materially change a note, update its folder's index in the same pass. A stale index makes a future session decide from a wrong map.
 
+**When a new folder is created:** create its `<Folder Name>.md` index at the same time, add an entry to the parent folder's index if it has one, and update the **Vault Structure** map in this file in the same pass. A folder the map doesn't show is a folder no future session will look in.
+
 ### Renaming and moving notes
 
 - **Moving** a note to another folder is safe — wikilinks resolve by note name, so a folder change doesn't break `[[links]]`. Update both folders' indexes in the same pass.
@@ -205,7 +207,8 @@ This is universal — every AI that reads this vault does it. I use multiple AIs
 This file is a living document. Update the profile sections as you learn new things about me through conversation. Updates happen silently and are logged in the daily note under "Profile Updates."
 
 **You can update:** Key People · How I Think · Health · Personal Interests · Beliefs · Daily Routine.
-**You must NOT update:** Who I Am (basic bio — only I change it) · the project sections · Vault Structure · What's Active Right Now (lives in Active Priorities) · My Preferences for Working with AI · Vault Rules for AI.
+**You must NOT update:** Who I Am (basic bio — only I change it) · the project sections · What's Active Right Now (lives in Active Priorities) · My Preferences for Working with AI · Vault Rules for AI.
+**Vault Structure is a special case:** never rewrite it on your own initiative, but when a folder is actually created, renamed, or removed, updating the map is part of that change — do it in the same pass.
 
 Judgment: a passing mention is not a personality trait. Check for duplicates/contradictions; if new info contradicts an entry, update that entry rather than adding a second. Match existing tone. Never remove an entry unless explicitly contradicted. Fewer, higher-quality updates.
 
