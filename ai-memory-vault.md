@@ -556,14 +556,13 @@ At the start of every session:
 
 If a CLAUDE.md already exists, append this rather than overwriting.
 
-**One memory, not two.** If the person uses Claude Code, it also keeps its *own* per-project memory file that auto-loads every session, separate from the vault (typically `~/.claude/projects/<project>/memory/MEMORY.md`). Left alone, that becomes a second memory layer that drifts from the vault — some things get written here, some there, and the two quietly disagree. This is the single most common way these systems rot. Close it on day one — but if that memory file (or any notes the person already keeps) already holds real content, migrate it into the vault FIRST. Overwriting it blind throws away hard-won context, so the order matters:
+**One memory, not two.** If the person uses Claude Code, it also keeps its *own* per-project memory file that auto-loads every session, separate from the vault (typically `~/.claude/projects/<project>/memory/MEMORY.md`). Left alone, that becomes a second memory layer that drifts from the vault — some things get written here, some there, and the two quietly disagree. This is the single most common way these systems rot. Close it on day one — but if that memory file (or any notes the person already keeps) already holds real content, migrate it into the vault FIRST. Two hard rules govern this entire migration: **you COPY, you never move — and you never delete.** The original memory files stay exactly where they are, untouched. Deleting originals is the person's job alone, by hand, if and when they choose — the most you ever do is tell them the path. The order:
 
 1. **Find the existing memory.** Look in `~/.claude/projects/` — each project folder has a `memory/` folder holding `MEMORY.md` and sometimes topic files. Note anything else the person has been treating as memory (old notes, exports, a prior system).
-2. **Do not delete anything yet.** Nothing gets removed until it is safely inside the vault.
-3. **Copy the files into the vault.** Drop them into a scratch working folder (e.g. `00 - Inbox/` or a temporary `_migration/` folder) so you can work on them as real notes.
-4. **Organize, consolidate, rename, and structure them.** Read each one, merge duplicates, give them clear names, add the frontmatter and wikilinks, and move each piece to its correct contextual home — the right project folder, Personal, or Resources. Same standard as every other note in the vault. Nothing is lost; it is just *placed* where it belongs. Clear out the scratch folder when you are done.
-5. **Archive the raw originals — do not delete them.** Once the content lives properly in the vault, copy the original files, untouched, into the Archive folder (e.g. `[N] - Archive/Old Memory/`). Keep them. This is a frozen, last-resort backup you can read if something ever seems missing later. You are not deleting your old memory, you are demoting it to an archive of record.
-6. **Now make the native memory a *pointer,* not a store.** With the content migrated and the originals safely archived, replace the contents of `MEMORY.md` with this redirect:
+2. **COPY the files into the vault — never move them.** Drop the copies into a scratch working folder (e.g. `00 - Inbox/` or a temporary `_migration/` folder) so you can work on them as real notes. The originals in `~/.claude/.../memory/` are not touched.
+3. **Organize, consolidate, rename, and structure the copies.** Read each one, merge duplicates, give them clear names, add the frontmatter and wikilinks, and move each piece (within the vault) to its correct contextual home — the right project folder, Personal, or Resources. Same standard as every other note in the vault. Keep going until the scratch folder is empty.
+4. **Keep a frozen archive copy too — and verify it.** Copy the raw originals, untouched, into the Archive folder (e.g. `[N] - Archive/Old Memory/`), then read the copies back and confirm every file made it over, complete. This is a last-resort backup to read if something ever seems missing later.
+5. **Make the native memory a *pointer,* not a store — with permission.** With the content migrated and archived, ask the person: "Everything from your old memory now lives in the vault, and the untouched originals are archived inside it too. Want me to replace the contents of MEMORY.md with a short redirect, so there's exactly one memory going forward?" Only on a clear yes, replace `MEMORY.md`'s contents with the redirect below. Touch nothing else in the memory folder — ever.
 
 ```markdown
 There is no separate memory layer here. The single source of truth is the Obsidian vault.
@@ -577,6 +576,8 @@ To remember something, write it to its place in the vault, never here.
 ```
 
 Now both outside files point the same way: the boot config (CLAUDE.md) and the AI's native memory (MEMORY.md) both redirect into the vault, so there is exactly one memory and it can't fork.
+
+**The final step belongs to the person, and you prompt it.** Once everything is migrated, organized, and the archive copies are verified, tell them it's time to clean house — say something like: "Everything from your old memory now lives in the vault, organized, with the untouched originals archived and verified inside it. Last step is yours: delete the old files in `~/.claude/projects/<project>/memory/` (leave the MEMORY.md redirect in place). I don't delete files — that one's deliberately your job." Give them the exact path for their machine. You never delete anything there yourself, no matter how redundant it looks — the same goes for any original notes you migrated from. You copy; only the person removes.
 
 ### 4.6 Folder Indexes
 
