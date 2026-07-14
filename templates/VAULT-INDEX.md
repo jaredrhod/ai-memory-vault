@@ -9,7 +9,7 @@ Read this file at the start of every conversation to understand who I am, how I 
 
 (This is a starter template. Every spot that needs your information is marked **[FILL IN: ...]**. You can fill them in by hand, but the better way is to hand the job to your AI: say "interview me and fill in my VAULT-INDEX" and let it ask you the questions. You can rename this file to anything you like — VAULT-INDEX is just the default.)
 
-(**AI:** if you are reading this file and any [FILL IN: ...] markers remain, this vault isn't set up yet — offer to interview the person and complete it for them. Ask about one topic at a time, conversationally. Then replace every marker with their real information, written in the first person as if they wrote it, keep only the optional sections they want, and delete this block and every other parenthetical instruction. The finished file should read like the person wrote it themselves, with no [FILL IN] markers left anywhere.)
+(**AI:** if you are reading this file and any [FILL IN: ...] markers remain, this vault isn't set up yet — offer to interview the person and complete it for them. Start with the agent itself: help them pick its name, its role, and its personality, and write those into the **Identity** section of CLAUDE.md (the boot file), not this note. Then ask about one topic at a time, conversationally. Interview manners: explain in one line why a section helps before asking about it, make clear that every personal section is optional, and never press for personal details — if they hesitate or skip anything, move on and delete that section. Then replace every marker with their real information, written in the first person as if they wrote it, keep only the optional sections they want, and delete this block and every other parenthetical instruction. The finished file should read like the person wrote it themselves, with no [FILL IN] markers left anywhere.)
 
 ---
 
@@ -21,7 +21,7 @@ This vault lives at `[FILL IN: your vault's full path — e.g. /Users/you/Docume
 
 ## Who I Am
 
-[FILL IN: your name, age if you want, where you live, who's in your household. First person, conversational, concise.]
+[FILL IN: your name and whatever context you want the AI to have — what you do, where you're based if you care to share it. First person, conversational, concise. Nothing here is required; share what's useful, skip what's not.]
 
 ## Key People
 
@@ -56,22 +56,28 @@ This vault lives at `[FILL IN: your vault's full path — e.g. /Users/you/Docume
 
 All open work lives in one note: [[Active Priorities]]. Tag each item with its project where it isn't obvious. Check it at the start of every conversation; verify an item's real state before acting on it (a listed item may already be done).
 
-(Optional sections — keep the ones that apply to you, delete the ones you skip. The Preferences section after them is worth keeping for everyone.)
+(Optional sections — these get personal, and they're entirely opt-in. More context makes the AI more useful, but skip or delete any of these freely; the system loses nothing. The Preferences section after them is worth keeping for everyone.)
+
+## Background
+[FILL IN: your story in a short paragraph — career path, how you got here, the people and ideas that shaped how you work. This is what lets the AI understand WHY you decide things the way you do.]
 
 ## How I Think
 [FILL IN: bullets, first person.]
 
 ## Health
-[FILL IN: bullets, first person.]
+[FILL IN: only what you want the AI to factor in — routines, goals, constraints. Or delete this section.]
 
 ## Personal Interests
 [FILL IN: bullets, first person.]
 
 ## Beliefs
-[FILL IN: bullets, first person.]
+[FILL IN: bullets, first person — only if you want the AI to know. Or delete this section.]
 
 ## Daily Routine
 [FILL IN: bullets, first person.]
+
+## What I Want
+[FILL IN: what you're actually building toward — goals, and what "winning" means to you. The AI can only weigh tradeoffs the way you would if it knows this.]
 
 ## My Preferences for Working with AI
 
@@ -89,6 +95,8 @@ All open work lives in one note: [[Active Priorities]]. Tag each item with its p
 - **Don't push me toward shipping.** After a round of edits, show me what changed and stop. No "ready to ship?" I'll say when I'm ready.
 - **Restating isn't approving.** If I retype a draft or think out loud about an option, that's me iterating, not signing off. Don't save it as final until I clearly say "lock it" or "ship it." When unsure, ask.
 - **Hand me big structured data as a file, not a chat paste.** Tell me the columns you need (never secrets) and I'll send a file.
+- **Most of my guidance is guidelines, not laws.** When I hand you a rule of thumb, it's a reference point, not legislation. When reality diverges from a guideline, use judgment and flag only the divergences that matter. Reserve "Locked" for the rare true invariants — if everything is locked, nothing is.
+- **I drive the trust-and-access ramp.** Never propose expanding your own access or capabilities; default to scoping access down. When I decide we're ready for more, we'll add it with safeguards. More access comes from me, not from you.
 
 ---
 
@@ -107,6 +115,10 @@ These rules apply to any AI that reads or writes to this vault.
 Every note MUST have YAML frontmatter. When you create a note, include it. When you edit an existing note that's missing or has incomplete frontmatter, fix it as part of that write. Don't stop to add frontmatter to files you're only reading. Code files are the exception — no frontmatter or wikilinks in code.
 
 Never ask me what the frontmatter values should be. Infer them.
+
+### Note format
+
+Simple, legible, readable. No random emojis. Checkboxes are real Markdown checkboxes (`- [ ]` / `- [x]`), never emoji stand-ins. **Append before you create:** default to adding to an existing note rather than spinning up a new one — fewer, fuller notes beat many thin ones. Create a new note only when nothing existing is a logical home.
 
 ```yaml
 ---
@@ -174,7 +186,7 @@ Rules the AI always follows when it writes for me. One worth stealing for everyo
 
 Daily notes capture what happened across all of my work sessions for a day. They live in `01 - Daily Notes/`, ideally sorted into month subfolders (`01 - Daily Notes/06 - June 2026/`) once the folder fills up. Filename `YYYY-MM-DD.md`. Frontmatter `status: active`, `project: personal`, `type: log`.
 
-Start the body with a human-readable date heading (`# Monday, June 8, 2026`). Then, right after it, an **`## Index`** block: one bold-topic line per session/entry with a one-sentence outcome. The index makes a day with many entries scannable instead of a wall of prose. Then the entry body using the Daily Note Template sections.
+Start the body with a human-readable date heading (`# Monday, June 8, 2026`). Then, right after it, an **`## Index`** block: one bold-topic line per session/entry with a one-sentence outcome. The index makes a day with many entries scannable instead of a wall of prose. Then the entry body follows the Daily Note Template — it ships with this system as `templates/DAILY-NOTE.md`; during setup, copy it into your vault as `01 - Daily Notes/Daily Note Template.md`. Its sections: **What Got Done · What's Still In Progress · Decisions Made · Notes Touched · Profile Updates**. Create every daily note FROM the template; never hand-roll one.
 
 If today's note already exists from an earlier session, append a new session section (`## Session 2`, `## Evening Session`) and add a line to the Index block — don't overwrite. Timestamp each entry with my local time.
 
