@@ -1,5 +1,7 @@
 # AI Memory Vault
 
+> **Never used Claude Code?** Start at [jaredrhod.com](https://jaredrhod.com): pick your situation and it routes you to the right path.
+
 Give your AI a real, persistent memory. This is the open-source system that turns an Obsidian vault into your AI's working memory, so it remembers everything across sessions, lives outside the model with no size ceiling, and pulls back exactly what it needs in one step. Free to use, share, and build on, just not to resell (see LICENSE).
 
 ## The build
