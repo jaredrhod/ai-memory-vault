@@ -791,7 +791,7 @@ mkdir -p ~/my-agent && cd ~/my-agent && git clone https://github.com/jaredrhod/f
 
 Windows (PowerShell):
 ```
-mkdir $HOME\my-agent; cd $HOME\my-agent; Invoke-WebRequest https://github.com/jaredrhod/fullstack-agent/archive/refs/heads/main.zip -OutFile fsa.zip; Expand-Archive fsa.zip .; Rename-Item fullstack-agent-main fullstack-agent; Remove-Item fsa.zip; cd fullstack-agent; claude "set me up"
+$d="$env:USERPROFILE\.local\bin"; if (Test-Path "$d\claude.exe") { $env:Path="$d;$env:Path" }; New-Item -ItemType Directory -Force -Path $HOME\my-agent | Out-Null; cd $HOME\my-agent; if (-not (Test-Path fullstack-agent\fullstack-agent.md)) { Invoke-WebRequest https://github.com/jaredrhod/fullstack-agent/archive/refs/heads/main.zip -OutFile fsa.zip; Expand-Archive fsa.zip . -Force; New-Item -ItemType Directory -Force -Path fullstack-agent | Out-Null; Get-ChildItem fullstack-agent-main -Force | Copy-Item -Destination fullstack-agent -Recurse -Force; Remove-Item fullstack-agent-main -Recurse -Force; Remove-Item fsa.zip }; cd fullstack-agent; if (Get-Command claude -ErrorAction SilentlyContinue) { claude "set me up" } else { Write-Output "Claude Code is not installed yet. Install it first at https://jaredrhod.com/start then paste this again." }
 ```
 
 Tell them what to expect: a fresh Claude Code session opens with the installer already talking. It asks their name, who their agent should be, and which pieces they want. Anything they already have gets found and kept. Their vault and their agent's identity are found and kept exactly as they are, and nothing about their memory gets rebuilt.
