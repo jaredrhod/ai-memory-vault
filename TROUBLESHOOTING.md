@@ -8,7 +8,7 @@ Open `VAULT-INDEX.md` at the vault root: its "Vault location" section records th
 
 ## Obsidian opened to a welcome screen instead of my vault
 
-Obsidian only opens vaults it knows about, and it learns about them from a registry file called `obsidian.json` (macOS: `~/Library/Application Support/obsidian/obsidian.json` · Windows: `%APPDATA%\Obsidian\obsidian.json` · Linux: `~/.config/obsidian/obsidian.json`). A vault created as a plain folder isn't in that registry yet, so a fresh Obsidian shows the picker. Two fixes:
+Obsidian only opens vaults it knows about, and it learns about them from a registry file called `obsidian.json` (macOS: `~/Library/Application Support/obsidian/obsidian.json` · Windows: `%APPDATA%\obsidian\obsidian.json` (lowercase folder) · Linux: `~/.config/obsidian/obsidian.json`). A vault created as a plain folder isn't in that registry yet, so a fresh Obsidian shows the picker. Two fixes:
 
 1. **By hand, one time:** on the welcome screen choose "Open folder as vault" and pick your vault folder (fresh installs put it at `~/<vault name>` in your home folder; older installs used `~/Documents/<vault name>`). Obsidian remembers it from then on.
 2. **Ask your agent:** have it register the vault in `obsidian.json` with `"open": true` (Obsidian must be closed while it edits, because the app rewrites that file on quit). Current versions of the setup wizard do this automatically; hitting this screen usually means the vault was created by an older run.

@@ -186,7 +186,7 @@ Rules the AI always follows when it writes for me. One worth stealing for everyo
 
 ### Daily Notes
 
-Daily notes capture what happened across all of my work sessions for a day. They live in `01 - Daily Notes/`, ideally sorted into month subfolders (`01 - Daily Notes/06 - June 2026/`) once the folder fills up. Filename `YYYY-MM-DD.md`. Frontmatter `status: active`, `project: personal`, `type: log`.
+Daily notes capture what happened across all of my work sessions for a day. They live in `01 - Daily Notes/`, in month subfolders named `NN - Month YYYY` (`01 - Daily Notes/06 - June 2026/`) from the very first note, never once the folder fills up -- a convention that starts later means two sessions reading two files disagree about where today's note goes. Filename `YYYY-MM-DD.md`. Frontmatter `status: active`, `project: personal`, `type: log`.
 
 Start the body with a human-readable date heading (`# Monday, June 8, 2026`). Then, right after it, an **`## Index`** block: one bold-topic line per session/entry with a one-sentence outcome. The index makes a day with many entries scannable instead of a wall of prose. Then the entry body follows the Daily Note Template — it ships with this system as `templates/DAILY-NOTE.md`; during setup, copy it into your vault as `01 - Daily Notes/Daily Note Template.md`. Its sections: **What Got Done · What's Still In Progress · Decisions Made · Notes Touched · Profile Updates**. Create every daily note FROM the template; never hand-roll one.
 
